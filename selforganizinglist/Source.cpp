@@ -78,15 +78,13 @@ public:
 		int index = search(elem);
 		if (index == -1)
 			throw std::out_of_range("Element not found");
-		return getElemByIndex(index);
-
-		
-		
+		return getElemByIndex(index);		
 	}
 
 	E& getElemByIndex(const int& index)
 	//for use if know what index what you want is at (i.e. use manual search method beforehand)
 	//swaps element forward in the list by a set amount upon successful search
+	//Note: elements are swapped 4 places - 4 was chosen arbitrarily and may be changed as desired
 	{
 		if (index < 0 || index >= count)
 			throw std::out_of_range("Invalid index");
